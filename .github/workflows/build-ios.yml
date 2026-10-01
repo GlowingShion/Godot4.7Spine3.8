@@ -19,9 +19,9 @@ jobs:
 
       - name: Clone godot-cpp (pinned)
         run: |
-          git clone --depth 1 https://github.com/godotengine/godot-cpp.git
-          git -C godot-cpp fetch --depth 1 origin 507ed9d840c01a3c5b2a39af8bb4000bfac30bf5
-          git -C godot-cpp checkout 507ed9d840c01a3c5b2a39af8bb4000bfac30bf5
+          git clone --depth 1 https://github.com/godotengine/godot-cpp.git spine-godot/godot-cpp
+          git -C spine-godot/godot-cpp fetch --depth 1 origin 507ed9d840c01a3c5b2a39af8bb4000bfac30bf5
+          git -C spine-godot/godot-cpp checkout 507ed9d840c01a3c5b2a39af8bb4000bfac30bf5
 
       - name: Build iOS device (arm64)
         run: |
