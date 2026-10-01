@@ -2,8 +2,6 @@ name: Build iOS (spine-godot 4.3 + Spine 3.8)
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main, master]
 
 jobs:
   build-ios:
