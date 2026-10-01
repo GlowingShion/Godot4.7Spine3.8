@@ -11,10 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python and SCons
+      - name: Set up SCons (in a venv)
         run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install scons
+          python3 -m venv "$GITHUB_WORKSPACE/venv"
+          "$GITHUB_WORKSPACE/venv/bin/python" -m pip install --upgrade pip scons
+          echo "$GITHUB_WORKSPACE/venv/bin" >> "$GITHUB_PATH"
 
       - name: Clone godot-cpp (pinned)
         run: |
