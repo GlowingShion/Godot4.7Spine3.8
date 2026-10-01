@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineSlotPose" inherits="RefCounted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores a pose for a slot.
+	</brief_description>
+	<description>
+		Stores the current pose for a slot, including color tinting, attachment, and deformation values.
+	</description>
+	<methods>
+		<method name="get_color">
+			<return type="Color" />
+			<description>
+				Returns the color used to tint the slot's attachment. If dark color is set, this is used as the light color for two color tinting.
+			</description>
+		</method>
+		<method name="set_color">
+			<return type="void" />
+			<param index="0" name="v" type="Color" />
+			<description>
+				Sets the color used to tint the slot's attachment. If dark color is set, this is used as the light color for two color tinting.
+			</description>
+		</method>
+		<method name="get_dark_color">
+			<return type="Color" />
+			<description>
+				Returns the dark color used to tint the slot's attachment for two color tinting. The dark color's alpha is not used.
+			</description>
+		</method>
+		<method name="set_dark_color">
+			<return type="void" />
+			<param index="0" name="v" type="Color" />
+			<description>
+				Sets the dark color used to tint the slot's attachment for two color tinting. The dark color's alpha is not used.
+			</description>
+		</method>
+		<method name="has_dark_color">
+			<return type="bool" />
+			<description>
+				Returns true if this slot has a dark color.
+			</description>
+		</method>
+		<method name="set_has_dark_color">
+			<return type="void" />
+			<param index="0" name="v" type="bool" />
+			<description>
+				Sets whether this slot has a dark color.
+			</description>
+		</method>
+		<method name="get_attachment">
+			<return type="SpineAttachment" />
+			<description>
+				Returns the current attachment for the slot, or null if the slot has no attachment.
+			</description>
+		</method>
+		<method name="set_attachment">
+			<return type="void" />
+			<param index="0" name="v" type="SpineAttachment" />
+			<description>
+				Sets the slot's attachment and, if the attachment changed, resets sequence_index and clears the deform. The deform is not cleared if the old attachment has the same timeline attachment as the specified attachment.
+			</description>
+		</method>
+		<method name="get_sequence_index">
+			<return type="int" />
+			<description>
+				Returns the index of the texture region to display when the slot's attachment has a Sequence. -1 represents the setup index.
+			</description>
+		</method>
+		<method name="set_sequence_index">
+			<return type="void" />
+			<param index="0" name="v" type="int" />
+			<description>
+				Sets the index of the texture region to display when the slot's attachment has a Sequence. -1 represents the setup index.
+			</description>
+		</method>
+		<method name="get_deform">
+			<return type="PackedFloat32Array" />
+			<description>
+				Returns values to deform the slot's attachment. For an unweighted mesh, the entries are local positions for each vertex. For a weighted mesh, the entries are an offset for each vertex which will be added to the mesh's local vertex positions.
+			</description>
+		</method>
+		<method name="set_deform">
+			<return type="void" />
+			<param index="0" name="v" type="PackedFloat32Array" />
+			<description>
+				Sets values to deform the slot's attachment. For an unweighted mesh, the entries are local positions for each vertex. For a weighted mesh, the entries are an offset for each vertex which will be added to the mesh's local vertex positions.
+			</description>
+		</method>
+	</methods>
+</class>

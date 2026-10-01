@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineSliderData" inherits="SpineConstraintData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores the setup pose for a Slider.
+	</brief_description>
+	<description>
+		Stores the setup pose data for a slider constraint, including the animation it references, whether it's additive, looping settings, and scale/offset values.
+	</description>
+	<methods>
+		<method name="get_animation">
+			<return type="SpineAnimation" />
+			<description>
+				Returns the animation referenced by this slider.
+			</description>
+		</method>
+		<method name="get_additive">
+			<return type="bool" />
+			<description>
+				Returns whether this slider uses additive blending.
+			</description>
+		</method>
+		<method name="set_additive">
+			<return type="void" />
+			<param index="0" name="value" type="bool" />
+			<description>
+				Sets whether this slider uses additive blending.
+			</description>
+		</method>
+		<method name="get_loop">
+			<return type="bool" />
+			<description>
+				Returns whether this slider loops.
+			</description>
+		</method>
+		<method name="set_loop">
+			<return type="void" />
+			<param index="0" name="value" type="bool" />
+			<description>
+				Sets whether this slider loops.
+			</description>
+		</method>
+		<method name="get_bone">
+			<return type="SpineBoneData" />
+			<description>
+				Returns the bone data for this slider.
+			</description>
+		</method>
+		<method name="set_bone">
+			<return type="void" />
+			<param index="0" name="value" type="SpineBoneData" />
+			<description>
+				Sets the bone data for this slider.
+			</description>
+		</method>
+		<method name="get_scale">
+			<return type="float" />
+			<description>
+				Returns the scale value for this slider.
+			</description>
+		</method>
+		<method name="set_scale">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the scale value for this slider.
+			</description>
+		</method>
+		<method name="get_offset">
+			<return type="float" />
+			<description>
+				Returns the offset value for this slider.
+			</description>
+		</method>
+		<method name="set_offset">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the offset value for this slider.
+			</description>
+		</method>
+		<method name="get_max">
+			<return type="float" />
+			<description>
+				Returns the maximum value for this slider.
+			</description>
+		</method>
+		<method name="set_max">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the maximum value for this slider.
+			</description>
+		</method>
+		<method name="get_local">
+			<return type="bool" />
+			<description>
+				Returns whether this slider operates in local space.
+			</description>
+		</method>
+		<method name="set_local">
+			<return type="void" />
+			<param index="0" name="value" type="bool" />
+			<description>
+				Sets whether this slider operates in local space.
+			</description>
+		</method>
+		<method name="get_setup_pose">
+			<return type="SpineSliderPose" />
+			<description>
+				Returns the setup pose for this slider data.
+			</description>
+		</method>
+	</methods>
+</class>

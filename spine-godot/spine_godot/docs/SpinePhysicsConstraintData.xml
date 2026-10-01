@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpinePhysicsConstraintData" inherits="SpineConstraintData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores the setup pose for a PhysicsConstraint.
+	</brief_description>
+	<description>
+		Stores the setup pose data for a physics constraint, which determines how physics simulation is configured for a bone.
+
+		See [url=https://esotericsoftware.com/spine-physics-constraints]Physics constraints[/url] in the Spine User Guide.
+	</description>
+	<methods>
+		<method name="get_bone">
+			<return type="SpineBoneData" />
+			<description>
+				Returns the bone constrained by this physics constraint.
+			</description>
+		</method>
+		<method name="get_x">
+			<return type="float" />
+			<description>
+				Returns the X offset for the physics constraint.
+			</description>
+		</method>
+		<method name="get_y">
+			<return type="float" />
+			<description>
+				Returns the Y offset for the physics constraint.
+			</description>
+		</method>
+		<method name="get_rotate">
+			<return type="float" />
+			<description>
+				Returns the rotation offset for the physics constraint.
+			</description>
+		</method>
+		<method name="get_scale_x">
+			<return type="float" />
+			<description>
+				Returns the X scale for the physics constraint.
+			</description>
+		</method>
+		<method name="get_shear_x">
+			<return type="float" />
+			<description>
+				Returns the X shear for the physics constraint.
+			</description>
+		</method>
+		<method name="get_limit">
+			<return type="float" />
+			<description>
+				Returns the limit for the physics constraint.
+			</description>
+		</method>
+		<method name="get_step">
+			<return type="float" />
+			<description>
+				Returns the step value for the physics simulation.
+			</description>
+		</method>
+		<method name="get_scale_y_mode">
+			<return type="int" enum="SpineConstant.ScaleYMode" />
+			<description>
+				Returns how scaleY changes when the physics constraint changes scaleX.
+			</description>
+		</method>
+		<method name="set_scale_y_mode">
+			<return type="void" />
+			<argument index="0" name="v" type="int" enum="SpineConstant.ScaleYMode" />
+			<description>
+				Sets how scaleY changes when the physics constraint changes scaleX.
+			</description>
+		</method>
+		<method name="is_inertia_global">
+			<return type="bool" />
+			<description>
+				Returns whether inertia is applied globally.
+			</description>
+		</method>
+		<method name="is_strength_global">
+			<return type="bool" />
+			<description>
+				Returns whether strength is applied globally.
+			</description>
+		</method>
+		<method name="is_damping_global">
+			<return type="bool" />
+			<description>
+				Returns whether damping is applied globally.
+			</description>
+		</method>
+		<method name="is_mass_global">
+			<return type="bool" />
+			<description>
+				Returns whether mass is applied globally.
+			</description>
+		</method>
+		<method name="is_wind_global">
+			<return type="bool" />
+			<description>
+				Returns whether wind is applied globally.
+			</description>
+		</method>
+		<method name="is_gravity_global">
+			<return type="bool" />
+			<description>
+				Returns whether gravity is applied globally.
+			</description>
+		</method>
+		<method name="is_mix_global">
+			<return type="bool" />
+			<description>
+				Returns whether mix is applied globally.
+			</description>
+		</method>
+		<method name="get_setup_pose">
+			<return type="SpinePhysicsConstraintPose" />
+			<description>
+				Returns the setup pose for this physics constraint data.
+			</description>
+		</method>
+	</methods>
+</class>

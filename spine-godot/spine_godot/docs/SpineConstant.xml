@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineConstant" inherits="Object" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Contains constant values and enumerations used throughout the Spine runtime.
+	</brief_description>
+	<description>
+		The SpineConstant class provides access to various enumeration values used by the Spine runtime system in Godot. These constants are used to configure animation mixing, bone inheritance, path constraints, blend modes, and physics settings.
+	</description>
+	<constants>
+		<constant name="Property_Rotate" value="1" enum="PropertyId">
+			Timeline property for rotation.
+		</constant>
+		<constant name="Property_X" value="2" enum="PropertyId">
+			Timeline property for X position.
+		</constant>
+		<constant name="Property_Y" value="4" enum="PropertyId">
+			Timeline property for Y position.
+		</constant>
+		<constant name="Property_ScaleX" value="8" enum="PropertyId">
+			Timeline property for X scale.
+		</constant>
+		<constant name="Property_ScaleY" value="16" enum="PropertyId">
+			Timeline property for Y scale.
+		</constant>
+		<constant name="Property_ShearX" value="32" enum="PropertyId">
+			Timeline property for X shear.
+		</constant>
+		<constant name="Property_ShearY" value="64" enum="PropertyId">
+			Timeline property for Y shear.
+		</constant>
+		<constant name="Property_Rgb" value="128" enum="PropertyId">
+			Timeline property for RGB color.
+		</constant>
+		<constant name="Property_Alpha" value="256" enum="PropertyId">
+			Timeline property for alpha transparency.
+		</constant>
+		<constant name="Property_Rgb2" value="512" enum="PropertyId">
+			Timeline property for second RGB color (for two-color tinting).
+		</constant>
+		<constant name="Property_Attachment" value="1024" enum="PropertyId">
+			Timeline property for attachment changes.
+		</constant>
+		<constant name="Property_Deform" value="2048" enum="PropertyId">
+			Timeline property for mesh deformation.
+		</constant>
+		<constant name="Property_Event" value="4096" enum="PropertyId">
+			Timeline property for events.
+		</constant>
+		<constant name="Property_DrawOrder" value="8192" enum="PropertyId">
+			Timeline property for draw order changes.
+		</constant>
+		<constant name="Property_IkConstraint" value="16384" enum="PropertyId">
+			Timeline property for IK constraint.
+		</constant>
+		<constant name="Property_TransformConstraint" value="32768" enum="PropertyId">
+			Timeline property for transform constraint.
+		</constant>
+		<constant name="Property_PathConstraintPosition" value="65536" enum="PropertyId">
+			Timeline property for path constraint position.
+		</constant>
+		<constant name="Property_PathConstraintSpacing" value="131072" enum="PropertyId">
+			Timeline property for path constraint spacing.
+		</constant>
+		<constant name="Property_PathConstraintMix" value="262144" enum="PropertyId">
+			Timeline property for path constraint mix.
+		</constant>
+		<constant name="Property_Sequence" value="524288" enum="PropertyId">
+			Timeline property for sequence.
+		</constant>
+		<constant name="Inherit_Normal" value="0" enum="Inherit">
+			Normal transform inheritance from parent bone.
+		</constant>
+		<constant name="Inherit_OnlyTranslation" value="1" enum="Inherit">
+			Inherits only translation from parent bone.
+		</constant>
+		<constant name="Inherit_NoRotationOrReflection" value="2" enum="Inherit">
+			Inherits transform except rotation and reflection.
+		</constant>
+		<constant name="Inherit_NoScale" value="3" enum="Inherit">
+			Inherits transform except scale.
+		</constant>
+		<constant name="Inherit_NoScaleOrReflection" value="4" enum="Inherit">
+			Inherits transform except scale and reflection.
+		</constant>
+		<constant name="PositionMode_Fixed" value="0" enum="PositionMode">
+			Path constraint position mode using fixed values.
+		</constant>
+		<constant name="PositionMode_Percent" value="1" enum="PositionMode">
+			Path constraint position mode using percentage of path length.
+		</constant>
+		<constant name="SpacingMode_Length" value="0" enum="SpacingMode">
+			Path constraint spacing based on fixed length.
+		</constant>
+		<constant name="SpacingMode_Fixed" value="1" enum="SpacingMode">
+			Path constraint spacing with fixed number of bones.
+		</constant>
+		<constant name="SpacingMode_Percent" value="2" enum="SpacingMode">
+			Path constraint spacing as percentage of path length.
+		</constant>
+		<constant name="RotateMode_Tangent" value="0" enum="RotateMode">
+			Path constraint rotation follows the path tangent.
+		</constant>
+		<constant name="RotateMode_Chain" value="1" enum="RotateMode">
+			Path constraint rotation chains bones together.
+		</constant>
+		<constant name="RotateMode_ChainScale" value="2" enum="RotateMode">
+			Path constraint rotation chains bones together with scale.
+		</constant>
+		<constant name="BlendMode_Normal" value="0" enum="BlendMode">
+			Normal alpha blending.
+		</constant>
+		<constant name="BlendMode_Additive" value="1" enum="BlendMode">
+			Additive blending.
+		</constant>
+		<constant name="BlendMode_Multiply" value="2" enum="BlendMode">
+			Multiply blending.
+		</constant>
+		<constant name="BlendMode_Screen" value="3" enum="BlendMode">
+			Screen blending.
+		</constant>
+		<constant name="ScaleYMode_None" value="0" enum="ScaleYMode">
+			No Y-scale mode adjustment.
+		</constant>
+		<constant name="ScaleYMode_Uniform" value="1" enum="ScaleYMode">
+			Uniform Y-scale mode.
+		</constant>
+		<constant name="ScaleYMode_Volume" value="2" enum="ScaleYMode">
+			Volume-preserving Y-scale mode.
+		</constant>
+		<constant name="UpdateMode_Process" value="0" enum="UpdateMode">
+			Update during the process step.
+		</constant>
+		<constant name="UpdateMode_Physics" value="1" enum="UpdateMode">
+			Update during the physics step.
+		</constant>
+		<constant name="UpdateMode_Manual" value="2" enum="UpdateMode">
+			Manual update mode, updates must be triggered explicitly.
+		</constant>
+		<constant name="BoneMode_Follow" value="0" enum="BoneMode">
+			Bone follows the physics simulation.
+		</constant>
+		<constant name="BoneMode_Drive" value="1" enum="BoneMode">
+			Bone drives the physics simulation.
+		</constant>
+		<constant name="Physics_None" value="0" enum="Physics">
+			Physics are not updated or applied.
+		</constant>
+		<constant name="Physics_Reset" value="1" enum="Physics">
+			Physics are reset to the current pose.
+		</constant>
+		<constant name="Physics_Update" value="2" enum="Physics">
+			Physics are updated and the pose from physics is applied.
+		</constant>
+		<constant name="Physics_Pose" value="3" enum="Physics">
+			Physics are not updated but the pose from physics is applied.
+		</constant>
+		<constant name="MixInterpolation_Linear" value="0" enum="MixInterpolation">
+			Linear interpolation between mix values.
+		</constant>
+		<constant name="MixInterpolation_Smooth" value="1" enum="MixInterpolation">
+			Smooth (ease in/out) interpolation between mix values.
+		</constant>
+		<constant name="MixInterpolation_SlowFast" value="2" enum="MixInterpolation">
+			Slow-to-fast interpolation between mix values.
+		</constant>
+		<constant name="MixInterpolation_FastSlow" value="3" enum="MixInterpolation">
+			Fast-to-slow interpolation between mix values.
+		</constant>
+		<constant name="MixInterpolation_Circle" value="4" enum="MixInterpolation">
+			Circular interpolation between mix values.
+		</constant>
+	</constants>
+</class>

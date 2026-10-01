@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineTransformConstraint" inherits="SpineObjectWrapper" version="3.4">
+	<brief_description>
+		Stores the current pose for a transform constraint.
+	</brief_description>
+	<description>
+		Stores the current pose for a transform constraint. A transform constraint adjusts the world transform of the constrained bones to match that of the source bone.
+		See [url]http://esotericsoftware.com/spine-transform-constraints[/url] in the Spine User Guide.
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="get_applied_pose">
+			<return type="SpineTransformConstraintPose" />
+			<description>
+				The constraint's applied pose data.
+			</description>
+		</method>
+		<method name="get_bones">
+			<return type="Array" />
+			<description>
+				The bones that will be modified by this transform constraint. Modifying the array has no effect.
+			</description>
+		</method>
+		<method name="get_data">
+			<return type="SpineTransformConstraintData" />
+			<description>
+				The transform constraint's setup pose data.
+			</description>
+		</method>
+		<method name="get_pose">
+			<return type="SpineTransformConstraintPose" />
+			<description>
+				The constraint's pose data.
+			</description>
+		</method>
+		<method name="get_source">
+			<return type="SpineBone" />
+			<description>
+				The source bone whose world transform will be copied to the constrained bones.
+			</description>
+		</method>
+		<method name="is_active">
+			<return type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="set_active">
+			<return type="void" />
+			<argument index="0" name="v" type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="set_source">
+			<return type="void" />
+			<argument index="0" name="v" type="SpineBone" />
+			<description>
+			</description>
+		</method>
+		<method name="update">
+			<return type="void" />
+			<argument index="0" name="skeleton" type="SpineSkeleton" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<constants>
+	</constants>
+</class>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpinePhysicsConstraint" inherits="RefCounted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores the current pose for a physics constraint that applies physics to bones.
+	</brief_description>
+	<description>
+		A physics constraint applies physics simulation to bones, allowing them to move and react based on physical forces like gravity, inertia, and momentum.
+
+		See [url=https://esotericsoftware.com/spine-physics-constraints]Physics constraints[/url] in the Spine User Guide.
+	</description>
+	<methods>
+		<method name="update">
+			<return type="void" />
+			<param index="0" name="skeleton" type="SpineSkeleton" />
+			<param index="1" name="physics" type="int" enum="SpineConstant.Physics" />
+			<description>
+				Updates the physics constraint. The physics parameter determines how physics are applied. See [enum SpineConstant.Physics].
+			</description>
+		</method>
+		<method name="get_data">
+			<return type="SpinePhysicsConstraintData" />
+			<description>
+				Returns the data for this physics constraint.
+			</description>
+		</method>
+		<method name="get_bone">
+			<return type="SpineBonePose" />
+			<description>
+				Returns the bone constrained by this physics constraint.
+			</description>
+		</method>
+		<method name="set_bone">
+			<return type="void" />
+			<param index="0" name="v" type="SpineBonePose" />
+			<description>
+				Sets the bone constrained by this physics constraint.
+			</description>
+		</method>
+		<method name="get_pose">
+			<return type="SpinePhysicsConstraintPose" />
+			<description>
+				Returns the current pose for this physics constraint.
+			</description>
+		</method>
+		<method name="get_applied_pose">
+			<return type="SpinePhysicsConstraintPose" />
+			<description>
+				Returns the applied pose for this physics constraint.
+			</description>
+		</method>
+		<method name="reset">
+			<return type="void" />
+			<param index="0" name="skeleton" type="SpineSkeleton" />
+			<description>
+				Resets the physics constraint.
+			</description>
+		</method>
+		<method name="translate">
+			<return type="void" />
+			<param index="0" name="x" type="float" />
+			<param index="1" name="y" type="float" />
+			<description>
+				Translates the physics constraint so next update forces are applied as if the bone moved an additional amount in world space.
+			</description>
+		</method>
+		<method name="rotate">
+			<return type="void" />
+			<param index="0" name="x" type="float" />
+			<param index="1" name="y" type="float" />
+			<param index="2" name="degrees" type="float" />
+			<description>
+				Rotates the physics constraint so next update forces are applied as if the bone rotated around the specified point in world space.
+			</description>
+		</method>
+	</methods>
+</class>

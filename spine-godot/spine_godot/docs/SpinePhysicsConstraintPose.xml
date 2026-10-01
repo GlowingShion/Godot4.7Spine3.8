@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpinePhysicsConstraintPose" inherits="RefCounted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores a pose for a physics constraint.
+	</brief_description>
+	<description>
+		Stores the current pose values for a physics constraint, including physics properties like inertia, strength, damping, mass, wind, and gravity.
+	</description>
+	<methods>
+		<method name="get_inertia">
+			<return type="float" />
+			<description>
+				Returns the inertia value for the physics constraint.
+			</description>
+		</method>
+		<method name="set_inertia">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the inertia value for the physics constraint.
+			</description>
+		</method>
+		<method name="get_strength">
+			<return type="float" />
+			<description>
+				Returns the strength value for the physics constraint.
+			</description>
+		</method>
+		<method name="set_strength">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the strength value for the physics constraint.
+			</description>
+		</method>
+		<method name="get_damping">
+			<return type="float" />
+			<description>
+				Returns the damping value for the physics constraint.
+			</description>
+		</method>
+		<method name="set_damping">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the damping value for the physics constraint.
+			</description>
+		</method>
+		<method name="get_mass_inverse">
+			<return type="float" />
+			<description>
+				Returns the inverse mass value for the physics constraint.
+			</description>
+		</method>
+		<method name="set_mass_inverse">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the inverse mass value for the physics constraint.
+			</description>
+		</method>
+		<method name="get_wind">
+			<return type="float" />
+			<description>
+				Returns the wind value for the physics constraint.
+			</description>
+		</method>
+		<method name="set_wind">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the wind value for the physics constraint.
+			</description>
+		</method>
+		<method name="get_gravity">
+			<return type="float" />
+			<description>
+				Returns the gravity value for the physics constraint.
+			</description>
+		</method>
+		<method name="set_gravity">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the gravity value for the physics constraint.
+			</description>
+		</method>
+		<method name="get_mix">
+			<return type="float" />
+			<description>
+				Returns a percentage (0-1) that controls the mix between the constrained and unconstrained poses.
+			</description>
+		</method>
+		<method name="set_mix">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets a percentage (0-1) that controls the mix between the constrained and unconstrained poses.
+			</description>
+		</method>
+	</methods>
+</class>

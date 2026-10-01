@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpinePathConstraintPose" inherits="RefCounted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores a pose for a path constraint.
+	</brief_description>
+	<description>
+		Stores the current pose values for a path constraint. Path constraints position and rotate bones along a path defined by a slot's attachment.
+	</description>
+	<methods>
+		<method name="get_position">
+			<return type="float" />
+			<description>
+				Returns the position along the path.
+			</description>
+		</method>
+		<method name="set_position">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the position along the path.
+			</description>
+		</method>
+		<method name="get_spacing">
+			<return type="float" />
+			<description>
+				Returns the spacing between bones.
+			</description>
+		</method>
+		<method name="set_spacing">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the spacing between bones.
+			</description>
+		</method>
+		<method name="get_mix_rotate">
+			<return type="float" />
+			<description>
+				Returns a percentage (0-1) that controls the mix between the constrained and unconstrained rotation.
+			</description>
+		</method>
+		<method name="set_mix_rotate">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets a percentage (0-1) that controls the mix between the constrained and unconstrained rotation.
+			</description>
+		</method>
+		<method name="get_mix_x">
+			<return type="float" />
+			<description>
+				Returns a percentage (0-1) that controls the mix between the constrained and unconstrained translation X.
+			</description>
+		</method>
+		<method name="set_mix_x">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets a percentage (0-1) that controls the mix between the constrained and unconstrained translation X.
+			</description>
+		</method>
+		<method name="get_mix_y">
+			<return type="float" />
+			<description>
+				Returns a percentage (0-1) that controls the mix between the constrained and unconstrained translation Y.
+			</description>
+		</method>
+		<method name="set_mix_y">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets a percentage (0-1) that controls the mix between the constrained and unconstrained translation Y.
+			</description>
+		</method>
+	</methods>
+</class>

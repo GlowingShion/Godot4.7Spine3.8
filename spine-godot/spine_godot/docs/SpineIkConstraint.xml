@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineIkConstraint" inherits="SpineObjectWrapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores the current pose for an IK constraint.
+	</brief_description>
+	<description>
+		Stores the current pose for an IK constraint. An IK constraint adjusts the rotation of 1 or 2 constrained bones so the tip of the last bone is as close to the target bone as possible.
+
+		See [url=http://esotericsoftware.com/spine-ik-constraints]IK constraints[/url] in the Spine User Guide.
+	</description>
+	<methods>
+		<method name="update">
+			<return type="void" />
+			<param index="0" name="skeleton" type="SpineSkeleton" />
+			<description>
+				Updates the constraint. The IK constraint is solved by adjusting the rotation of the bones so the tip of the last bone is as close to the target as possible.
+			</description>
+		</method>
+		<method name="get_data">
+			<return type="SpineIkConstraintData" />
+			<description>
+				Returns the IK constraint's setup pose data.
+			</description>
+		</method>
+		<method name="get_bones">
+			<return type="Array" />
+			<description>
+				Returns the bones that will be modified by this IK constraint. Modifying the array has no effect.
+			</description>
+		</method>
+		<method name="get_target">
+			<return type="SpineBone" />
+			<description>
+				Returns the bone that is the target for the IK constraint. The bones will be rotated so the tip of the last bone is as close to the target as possible.
+			</description>
+		</method>
+		<method name="set_target">
+			<return type="void" />
+			<param index="0" name="v" type="SpineBone" />
+			<description>
+				Sets the bone that is the target for the IK constraint. The bones will be rotated so the tip of the last bone is as close to the target as possible.
+			</description>
+		</method>
+		<method name="get_pose">
+			<return type="SpineIkConstraintPose" />
+			<description>
+				Returns the current pose for this IK constraint, containing mix, softness, bend direction, compress, and stretch values.
+			</description>
+		</method>
+		<method name="get_applied_pose">
+			<return type="SpineIkConstraintPose" />
+			<description>
+				Returns the applied pose for this IK constraint.
+			</description>
+		</method>
+		<method name="is_active">
+			<return type="bool" />
+			<description>
+				Returns whether this IK constraint is active. When inactive, the constraint is not applied.
+			</description>
+		</method>
+		<method name="set_active">
+			<return type="void" />
+			<param index="0" name="v" type="bool" />
+			<description>
+				Sets whether this IK constraint is active. When inactive, the constraint is not applied.
+			</description>
+		</method>
+	</methods>
+</class>

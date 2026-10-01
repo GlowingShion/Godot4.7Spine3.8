@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineEventData" inherits="RefCounted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores the setup pose values for an Event.
+	</brief_description>
+	<description>
+		Stores the setup pose values for an Event. Events can have various types of values associated with them including integers, floats, strings, and audio information. The event name is unique within the skeleton.
+	</description>
+	<methods>
+		<method name="get_event_name">
+			<return type="String" />
+			<description>
+				Returns the name of the event, which is unique within the skeleton.
+			</description>
+		</method>
+		<method name="get_int_value">
+			<return type="int" />
+			<description>
+				Returns the integer value for this event.
+			</description>
+		</method>
+		<method name="set_int_value">
+			<return type="void" />
+			<param index="0" name="v" type="int" />
+			<description>
+				Sets the integer value for this event.
+			</description>
+		</method>
+		<method name="get_float_value">
+			<return type="float" />
+			<description>
+				Returns the float value for this event.
+			</description>
+		</method>
+		<method name="set_float_value">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the float value for this event.
+			</description>
+		</method>
+		<method name="get_string_value">
+			<return type="String" />
+			<description>
+				Returns the string value for this event.
+			</description>
+		</method>
+		<method name="set_string_value">
+			<return type="void" />
+			<param index="0" name="v" type="String" />
+			<description>
+				Sets the string value for this event.
+			</description>
+		</method>
+		<method name="get_audio_path">
+			<return type="String" />
+			<description>
+				Returns the audio path for this event.
+			</description>
+		</method>
+		<method name="set_audio_path">
+			<return type="void" />
+			<param index="0" name="v" type="String" />
+			<description>
+				Sets the audio path for this event.
+			</description>
+		</method>
+		<method name="get_volume">
+			<return type="float" />
+			<description>
+				Returns the volume for the audio of this event.
+			</description>
+		</method>
+		<method name="set_volume">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the volume for the audio of this event.
+			</description>
+		</method>
+		<method name="get_balance">
+			<return type="float" />
+			<description>
+				Returns the balance for the audio of this event.
+			</description>
+		</method>
+		<method name="set_balance">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the balance for the audio of this event.
+			</description>
+		</method>
+	</methods>
+</class>

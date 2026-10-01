@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineBonePose" inherits="SpineBoneLocal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		The applied pose for a bone with constraints applied and world transform computed.
+	</brief_description>
+	<description>
+		The applied pose for a bone. This is the bone pose with constraints applied and the world transform computed by [SpineSkeleton]'s update_world_transform method. Inherits all local transform properties from [SpineBoneLocal] and adds world transform properties and transformation methods.
+
+		See [url=https://esotericsoftware.com/spine-runtime-skeletons#World-transforms]World transforms[/url] in the Spine Runtimes Guide.
+	</description>
+	<methods>
+		<method name="get_a">
+			<return type="float" />
+			<description>
+				Returns part of the world transform matrix for the X axis. If changed, update_local_transform should be called.
+			</description>
+		</method>
+		<method name="set_a">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets part of the world transform matrix for the X axis. If changed, update_local_transform should be called.
+			</description>
+		</method>
+		<method name="get_b">
+			<return type="float" />
+			<description>
+				Returns part of the world transform matrix for the Y axis. If changed, update_local_transform should be called.
+			</description>
+		</method>
+		<method name="set_b">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets part of the world transform matrix for the Y axis. If changed, update_local_transform should be called.
+			</description>
+		</method>
+		<method name="get_c">
+			<return type="float" />
+			<description>
+				Returns part of the world transform matrix for the X axis. If changed, update_local_transform should be called.
+			</description>
+		</method>
+		<method name="set_c">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets part of the world transform matrix for the X axis. If changed, update_local_transform should be called.
+			</description>
+		</method>
+		<method name="get_d">
+			<return type="float" />
+			<description>
+				Returns part of the world transform matrix for the Y axis. If changed, update_local_transform should be called.
+			</description>
+		</method>
+		<method name="set_d">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets part of the world transform matrix for the Y axis. If changed, update_local_transform should be called.
+			</description>
+		</method>
+		<method name="get_world_x">
+			<return type="float" />
+			<description>
+				Returns the world X position. If changed, update_local_transform should be called.
+			</description>
+		</method>
+		<method name="set_world_x">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the world X position. If changed, update_local_transform should be called.
+			</description>
+		</method>
+		<method name="get_world_y">
+			<return type="float" />
+			<description>
+				Returns the world Y position. If changed, update_local_transform should be called.
+			</description>
+		</method>
+		<method name="set_world_y">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the world Y position. If changed, update_local_transform should be called.
+			</description>
+		</method>
+		<method name="get_world_rotation_x">
+			<return type="float" />
+			<description>
+				Returns the world rotation for the X axis, calculated using a and c.
+			</description>
+		</method>
+		<method name="get_world_rotation_y">
+			<return type="float" />
+			<description>
+				Returns the world rotation for the Y axis, calculated using b and d.
+			</description>
+		</method>
+		<method name="get_world_scale_x">
+			<return type="float" />
+			<description>
+				Returns the magnitude (always positive) of the world scale X, calculated using a and c.
+			</description>
+		</method>
+		<method name="get_world_scale_y">
+			<return type="float" />
+			<description>
+				Returns the magnitude (always positive) of the world scale Y, calculated using b and d.
+			</description>
+		</method>
+		<method name="world_to_local">
+			<return type="Vector2" />
+			<param index="0" name="world_position" type="Vector2" />
+			<description>
+				Transforms a point from world coordinates to the bone's local coordinates.
+			</description>
+		</method>
+		<method name="local_to_world">
+			<return type="Vector2" />
+			<param index="0" name="local_position" type="Vector2" />
+			<description>
+				Transforms a point from the bone's local coordinates to world coordinates.
+			</description>
+		</method>
+		<method name="world_to_parent">
+			<return type="Vector2" />
+			<param index="0" name="world_position" type="Vector2" />
+			<description>
+				Transforms a point from world coordinates to the parent bone's local coordinates.
+			</description>
+		</method>
+		<method name="parent_to_world">
+			<return type="Vector2" />
+			<param index="0" name="parent_position" type="Vector2" />
+			<description>
+				Transforms a point from the parent bone's coordinates to world coordinates.
+			</description>
+		</method>
+		<method name="world_to_local_rotation">
+			<return type="float" />
+			<param index="0" name="world_rotation" type="float" />
+			<description>
+				Transforms a world rotation to a local rotation.
+			</description>
+		</method>
+		<method name="local_to_world_rotation">
+			<return type="float" />
+			<param index="0" name="local_rotation" type="float" />
+			<description>
+				Transforms a local rotation to a world rotation.
+			</description>
+		</method>
+		<method name="rotate_world">
+			<return type="void" />
+			<param index="0" name="degrees" type="float" />
+			<description>
+				Rotates the world transform the specified amount in degrees.
+
+				After changes are made to the world transform, update_local_transform should be called on this bone and any child bones, recursively.
+			</description>
+		</method>
+		<method name="update_world_transform">
+			<return type="void" />
+			<param index="0" name="skeleton" type="SpineSkeleton" />
+			<description>
+				Computes the world transform using the parent bone's applied pose and this pose. Child bones are not updated.
+
+				See [url=https://esotericsoftware.com/spine-runtime-skeletons#World-transforms]World transforms[/url] in the Spine Runtimes Guide.
+			</description>
+		</method>
+		<method name="update_local_transform">
+			<return type="void" />
+			<param index="0" name="skeleton" type="SpineSkeleton" />
+			<description>
+				Computes the local transform values from the world transform.
+
+				If the world transform is modified (by a constraint, rotate_world, etc) then this method should be called so the local transform matches the world transform. The local transform may be needed by other code (eg to apply another constraint).
+
+				Some information is ambiguous in the world transform, such as -1,-1 scale versus 180 rotation. The local transform after calling this method is equivalent to the local transform used to compute the world transform, but may not be identical.
+			</description>
+		</method>
+	</methods>
+</class>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineTransformConstraintPose" inherits="RefCounted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores a pose for a transform constraint.
+	</brief_description>
+	<description>
+		Stores the current pose values for a transform constraint. Transform constraints adjust bone transforms to match a target bone's transform, with various mix values controlling how much each transform component is affected.
+	</description>
+	<methods>
+		<method name="get_mix_rotate">
+			<return type="float" />
+			<description>
+				Returns a percentage (0-1) that controls the mix between the constrained and unconstrained rotation.
+			</description>
+		</method>
+		<method name="set_mix_rotate">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets a percentage (0-1) that controls the mix between the constrained and unconstrained rotation.
+			</description>
+		</method>
+		<method name="get_mix_x">
+			<return type="float" />
+			<description>
+				Returns a percentage (0-1) that controls the mix between the constrained and unconstrained translation X.
+			</description>
+		</method>
+		<method name="set_mix_x">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets a percentage (0-1) that controls the mix between the constrained and unconstrained translation X.
+			</description>
+		</method>
+		<method name="get_mix_y">
+			<return type="float" />
+			<description>
+				Returns a percentage (0-1) that controls the mix between the constrained and unconstrained translation Y.
+			</description>
+		</method>
+		<method name="set_mix_y">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets a percentage (0-1) that controls the mix between the constrained and unconstrained translation Y.
+			</description>
+		</method>
+		<method name="get_mix_scale_x">
+			<return type="float" />
+			<description>
+				Returns a percentage (0-1) that controls the mix between the constrained and unconstrained scale X.
+			</description>
+		</method>
+		<method name="set_mix_scale_x">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets a percentage (0-1) that controls the mix between the constrained and unconstrained scale X.
+			</description>
+		</method>
+		<method name="get_mix_scale_y">
+			<return type="float" />
+			<description>
+				Returns a percentage (0-1) that controls the mix between the constrained and unconstrained scale Y.
+			</description>
+		</method>
+		<method name="set_mix_scale_y">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets a percentage (0-1) that controls the mix between the constrained and unconstrained scale Y.
+			</description>
+		</method>
+		<method name="get_mix_shear_y">
+			<return type="float" />
+			<description>
+				Returns a percentage (0-1) that controls the mix between the constrained and unconstrained shear Y.
+			</description>
+		</method>
+		<method name="set_mix_shear_y">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets a percentage (0-1) that controls the mix between the constrained and unconstrained shear Y.
+			</description>
+		</method>
+	</methods>
+</class>

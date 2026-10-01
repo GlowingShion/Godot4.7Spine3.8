@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineBoneLocal" inherits="RefCounted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores a bone's local pose.
+	</brief_description>
+	<description>
+		Stores a bone's local pose, which consists of the bone's position, rotation, scale, and shear in its local coordinate space (relative to its parent). The inherit property determines how parent world transforms affect this bone.
+	</description>
+	<methods>
+		<method name="get_x">
+			<return type="float" />
+			<description>
+				Returns the local x translation.
+			</description>
+		</method>
+		<method name="set_x">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the local x translation.
+			</description>
+		</method>
+		<method name="get_y">
+			<return type="float" />
+			<description>
+				Returns the local y translation.
+			</description>
+		</method>
+		<method name="set_y">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the local y translation.
+			</description>
+		</method>
+		<method name="get_rotation">
+			<return type="float" />
+			<description>
+				Returns the local rotation in degrees, counter clockwise.
+			</description>
+		</method>
+		<method name="set_rotation">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the local rotation in degrees, counter clockwise.
+			</description>
+		</method>
+		<method name="get_scale_x">
+			<return type="float" />
+			<description>
+				Returns the local scaleX.
+			</description>
+		</method>
+		<method name="set_scale_x">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the local scaleX.
+			</description>
+		</method>
+		<method name="get_scale_y">
+			<return type="float" />
+			<description>
+				Returns the local scaleY.
+			</description>
+		</method>
+		<method name="set_scale_y">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the local scaleY.
+			</description>
+		</method>
+		<method name="get_shear_x">
+			<return type="float" />
+			<description>
+				Returns the local shearX.
+			</description>
+		</method>
+		<method name="set_shear_x">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the local shearX.
+			</description>
+		</method>
+		<method name="get_shear_y">
+			<return type="float" />
+			<description>
+				Returns the local shearY.
+			</description>
+		</method>
+		<method name="set_shear_y">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the local shearY.
+			</description>
+		</method>
+		<method name="get_inherit">
+			<return type="int" enum="SpineConstant.Inherit" />
+			<description>
+				Returns how parent world transforms affect this bone. See [enum SpineConstant.Inherit].
+			</description>
+		</method>
+		<method name="set_inherit">
+			<return type="void" />
+			<param index="0" name="v" type="int" enum="SpineConstant.Inherit" />
+			<description>
+				Sets how parent world transforms affect this bone. See [enum SpineConstant.Inherit].
+			</description>
+		</method>
+		<method name="set_position">
+			<return type="void" />
+			<param index="0" name="x" type="float" />
+			<param index="1" name="y" type="float" />
+			<description>
+				Sets both the local x and y translation at once.
+			</description>
+		</method>
+		<method name="set_scale">
+			<return type="void" />
+			<param index="0" name="scale_x" type="float" />
+			<param index="1" name="scale_y" type="float" />
+			<description>
+				Sets both the local scaleX and scaleY at once.
+			</description>
+		</method>
+		<method name="set_scale_uniform">
+			<return type="void" />
+			<param index="0" name="scale" type="float" />
+			<description>
+				Sets both the local scaleX and scaleY to the same value.
+			</description>
+		</method>
+	</methods>
+</class>

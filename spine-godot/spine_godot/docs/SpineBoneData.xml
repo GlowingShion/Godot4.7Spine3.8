@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineBoneData" inherits="SpineObjectWrapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores the setup pose for a bone.
+	</brief_description>
+	<description>
+		Stores the setup pose for a bone. The setup pose is the reference pose for the skeleton, before any animations are applied.
+	</description>
+	<methods>
+		<method name="get_index">
+			<return type="int" />
+			<description>
+				Returns the index of the bone in Skeleton.bones.
+			</description>
+		</method>
+		<method name="get_bone_name">
+			<return type="String" />
+			<description>
+				Returns the name of the bone, which is unique across all bones in the skeleton.
+			</description>
+		</method>
+		<method name="get_parent">
+			<return type="SpineBoneData" />
+			<description>
+				Returns the parent bone data. May be null for the root bone.
+			</description>
+		</method>
+		<method name="get_length">
+			<return type="float" />
+			<description>
+				Returns the bone's length.
+			</description>
+		</method>
+		<method name="set_length">
+			<return type="void" />
+			<param index="0" name="v" type="float" />
+			<description>
+				Sets the bone's length.
+			</description>
+		</method>
+		<method name="get_setup_pose">
+			<return type="SpineBonePose" />
+			<description>
+				Returns the setup pose for this bone, containing position, rotation, scale, and shear.
+			</description>
+		</method>
+		<method name="is_skin_required">
+			<return type="bool" />
+			<description>
+				Returns whether the bone is only active when a skin containing it is active.
+			</description>
+		</method>
+		<method name="set_skin_required">
+			<return type="void" />
+			<param index="0" name="v" type="bool" />
+			<description>
+				Sets whether the bone is only active when a skin containing it is active.
+			</description>
+		</method>
+		<method name="get_color">
+			<return type="Color" />
+			<description>
+				Returns the color of the bone as it was in Spine, or a default color if nonessential data was not exported. Bones are not usually rendered at runtime.
+			</description>
+		</method>
+		<method name="set_color">
+			<return type="void" />
+			<param index="0" name="v" type="Color" />
+			<description>
+				Sets the color of the bone.
+			</description>
+		</method>
+		<method name="get_icon">
+			<return type="String" />
+			<description>
+				Returns the icon name for this bone, if any.
+			</description>
+		</method>
+		<method name="is_visible">
+			<return type="bool" />
+			<description>
+				Returns whether the bone is visible.
+			</description>
+		</method>
+		<method name="set_visible">
+			<return type="void" />
+			<param index="0" name="v" type="bool" />
+			<description>
+				Sets whether the bone is visible.
+			</description>
+		</method>
+	</methods>
+</class>

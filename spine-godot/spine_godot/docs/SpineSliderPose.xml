@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineSliderPose" inherits="RefCounted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores a pose for a slider.
+	</brief_description>
+	<description>
+		Stores the current pose values for a slider constraint, including the time position and mix value.
+	</description>
+	<methods>
+		<method name="get_time">
+			<return type="float" />
+			<description>
+				Returns the time position for this slider.
+			</description>
+		</method>
+		<method name="set_time">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the time position for this slider.
+			</description>
+		</method>
+		<method name="get_mix">
+			<return type="float" />
+			<description>
+				Returns the mix value for this slider.
+			</description>
+		</method>
+		<method name="set_mix">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets the mix value for this slider.
+			</description>
+		</method>
+	</methods>
+</class>

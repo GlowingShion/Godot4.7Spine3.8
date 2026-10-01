@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineIkConstraintPose" inherits="RefCounted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		Stores the current pose for an IK constraint.
+	</brief_description>
+	<description>
+		Stores the current pose values for an IK (Inverse Kinematics) constraint. IK constraints can be used to make bones follow a target, with various parameters controlling how the constraint behaves.
+	</description>
+	<methods>
+		<method name="get_mix">
+			<return type="float" />
+			<description>
+				Returns a percentage (0-1) that controls the mix between the constrained and unconstrained rotation.
+
+				For two bone IK: if the parent bone has local nonuniform scale, the child bone's local Y translation is set to 0.
+			</description>
+		</method>
+		<method name="set_mix">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				Sets a percentage (0-1) that controls the mix between the constrained and unconstrained rotation.
+
+				For two bone IK: if the parent bone has local nonuniform scale, the child bone's local Y translation is set to 0.
+			</description>
+		</method>
+		<method name="get_softness">
+			<return type="float" />
+			<description>
+				For two bone IK, returns the target bone's distance from the maximum reach of the bones where rotation begins to slow. The bones will not straighten completely until the target is this far out of range.
+			</description>
+		</method>
+		<method name="set_softness">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+				For two bone IK, sets the target bone's distance from the maximum reach of the bones where rotation begins to slow. The bones will not straighten completely until the target is this far out of range.
+			</description>
+		</method>
+		<method name="get_bend_direction">
+			<return type="int" />
+			<description>
+				For two bone IK, returns the bend direction of the IK bones, either 1 or -1.
+			</description>
+		</method>
+		<method name="set_bend_direction">
+			<return type="void" />
+			<param index="0" name="value" type="int" />
+			<description>
+				For two bone IK, sets the bend direction of the IK bones, either 1 or -1.
+			</description>
+		</method>
+		<method name="get_compress">
+			<return type="bool" />
+			<description>
+				For one bone IK, returns whether the bone is scaled to reach the target when the target is too close.
+			</description>
+		</method>
+		<method name="set_compress">
+			<return type="void" />
+			<param index="0" name="value" type="bool" />
+			<description>
+				For one bone IK, sets whether the bone is scaled to reach the target when the target is too close.
+			</description>
+		</method>
+		<method name="get_stretch">
+			<return type="bool" />
+			<description>
+				Returns whether the parent bone is scaled to reach the target when the target is out of range.
+
+				For two bone IK: 1) the child bone's local Y translation is set to 0, 2) stretch is not applied if softness is > 0, and 3) if the parent bone has local nonuniform scale, stretch is not applied.
+			</description>
+		</method>
+		<method name="set_stretch">
+			<return type="void" />
+			<param index="0" name="value" type="bool" />
+			<description>
+				Sets whether the parent bone is scaled to reach the target when the target is out of range.
+
+				For two bone IK: 1) the child bone's local Y translation is set to 0, 2) stretch is not applied if softness is > 0, and 3) if the parent bone has local nonuniform scale, stretch is not applied.
+			</description>
+		</method>
+	</methods>
+</class>

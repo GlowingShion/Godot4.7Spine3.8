@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SpineSlider" inherits="RefCounted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+		A slider constraint for animating properties.
+	</brief_description>
+	<description>
+		A slider constraint that can be used to animate various properties of bones. Sliders provide a way to control and animate bone transformations through constraint values.
+	</description>
+	<methods>
+		<method name="update">
+			<return type="void" />
+			<param index="0" name="skeleton" type="SpineSkeleton" />
+			<param index="1" name="physics" type="int" enum="SpineConstant.Physics" />
+			<description>
+				Updates the slider constraint. The physics parameter determines how physics are applied. See [enum SpineConstant.Physics].
+			</description>
+		</method>
+		<method name="get_data">
+			<return type="SpineSliderData" />
+			<description>
+				Returns the data for this slider constraint.
+			</description>
+		</method>
+		<method name="get_bone">
+			<return type="SpineBonePose" />
+			<description>
+				Returns the bone affected by this slider.
+			</description>
+		</method>
+		<method name="set_bone">
+			<return type="void" />
+			<param index="0" name="v" type="SpineBonePose" />
+			<description>
+				Sets the bone affected by this slider.
+			</description>
+		</method>
+		<method name="get_pose">
+			<return type="SpineSliderPose" />
+			<description>
+				Returns the current pose for this slider.
+			</description>
+		</method>
+		<method name="get_applied_pose">
+			<return type="SpineSliderPose" />
+			<description>
+				Returns the applied pose for this slider.
+			</description>
+		</method>
+		<method name="is_active">
+			<return type="bool" />
+			<description>
+				Returns whether this slider is active.
+			</description>
+		</method>
+		<method name="set_active">
+			<return type="void" />
+			<param index="0" name="v" type="bool" />
+			<description>
+				Sets whether this slider is active.
+			</description>
+		</method>
+	</methods>
+</class>
